@@ -15,6 +15,9 @@ import Notifications from './components/NotificationPlugin'
 // MaterialDashboard plugin
 import MaterialDashboard from './material-dashboard'
 
+// Store
+import store from './store'
+
 import Chartist from 'chartist'
 
 // configure router
@@ -39,6 +42,7 @@ Object.defineProperty(Vue.prototype, '$Chartist', {
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store: store,
   render: h => h(App),
   router,
   data: {

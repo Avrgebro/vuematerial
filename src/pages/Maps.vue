@@ -9,7 +9,7 @@ export default {
     initMap (google) {
       var myLatlng = new google.maps.LatLng(40.748817, -73.985428)
       var mapOptions = {
-        zoom: 13,
+        zoom: 3,
         center: myLatlng,
         scrollwheel: false, // we disable de scroll over the map, it is a really annoing when you scroll through page
         styles: [{
@@ -64,7 +64,7 @@ export default {
     }
   },
   mounted () {
-    GoogleMapsLoader.KEY = 'YOUR_KEY_HERE'
+    GoogleMapsLoader.KEY = 'AIzaSyD00-oQmNwRlAnOOsz1kwRkHi594ymoRBg'
     GoogleMapsLoader.load((google) => {
       this.initMap(google)
     })
