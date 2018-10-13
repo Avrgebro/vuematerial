@@ -8,7 +8,7 @@
       </a>
 
       <a target="_blank" class="simple-text logo-normal">
-        {{title}}
+        {{title}} - {{ this.$store.state.testuser.user }}
       </a>
     </div>
     <div class="sidebar-wrapper">

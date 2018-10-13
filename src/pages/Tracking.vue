@@ -1,42 +1,42 @@
 <template>
-  <div class="tracking">
-    <div class="md-layout">
-      <md-card>
-        <md-card-header data-background-color="blue">
-          <h2>Tracking de Parcelas</h2>
-          <p>
-            {{ this.$store.state.testuser.user}}
-          </p>
-        </md-card-header>
-        <md-card-content>
-          <div class="md-layout md-size-33">
-            <div class="md-layout-item md-size-25">
-              <div class="md-layout">
-                <md-field class="md-size-33 md-layout-item">
-                  <label>Numero de tracking</label>
-                  <md-input v-model="tracking" placeholder="Ingrese numero de tracking"></md-input>
+  <div class="Tracking">
+    <md-content class="wrapper-full-page wrapper md-accent">
+      <div class="md-layout container">
+        <md-card class="md-layout-item md-size-100">
+
+          <md-card-content>
+
+            <h2 class="md-layout">Tracking de parcelas</h2>
+            <hr />
+
+            <div class="md-layout">
+              <div class="md-layout-item md-size-25">
+                <md-field>
+                  <label>Tracking</label>
+                  <md-input></md-input>
                 </md-field>
-                <md-button v-if="!buscando" v-on:click="buscar()" class="md-layout-item">
-                  <md-progress-spinner md-mode="indeterminate"></md-progress-spinner>
-                </md-button>
+              </div>
+              <md-button class="md-primary md-simple">Buscar</md-button>
+            </div>
+
+            <div class="md-layout">
+              <div class="md-layout-item bordered">
+                <md-field>
+                  <label>Detalle</label>
+                  <md-textarea></md-textarea>
+                </md-field>
               </div>
             </div>
-          </div>
-          <div class="md-layout">
-            <div class="md-layout-item">
-              <md-field>
-                <label>Detalle de parcela</label>
-                <md-textarea v-model="detalle"></md-textarea>
-              </md-field>
-            </div>
-          </div>
-        </md-card-content>
-      </md-card>
-    </div>
+
+          </md-card-content>
+        </md-card>
+      </div>
+    </md-content>
   </div>
 </template>
 <script>
 export default{
+  name: 'Tracking',
   data () {
     return {
       tracking: '',
@@ -52,5 +52,9 @@ export default{
   }
 }
 </script>
-<style>
+<style lang="scss">
+.bordered {
+  border: 1px solid grey;
+  border-radius: 5px;
+}
 </style>
