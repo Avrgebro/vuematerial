@@ -1,5 +1,5 @@
 <template>
-  <div class="Login">
+  <div class="Login" v-on:keyup.enter="auth">
     <md-toolbar class="md-primary" md-elevation="1">
       <div class="md-toolbar-row md-toolbar-offset">
         <div class="md-toolbar-section-start">
@@ -38,7 +38,7 @@
 
         <div class="actions md-layout md-alignment-center-space-between">
           <a></a>
-          <md-button class="md-raised md-primary" @click="auth">Log in</md-button>
+          <md-button class="md-raised md-primary" v-on:click="auth">Log in</md-button>
         </div>
 
         <div class="loading-overlay" v-if="loading">

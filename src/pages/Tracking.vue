@@ -1,29 +1,33 @@
 <template>
   <div class="Tracking">
-    <md-content class="wrapper-full-page wrapper md-accent">
+    <md-content class="wrapper-full-page wrapper md-accent" style="margin-top: 20px">
       <div class="md-layout container">
         <md-card class="md-layout-item md-size-100">
 
-          <md-card-content>
+          <md-card-header class="md-size-50" data-background-color="green">
+            <h4 class="title">Tracking</h4>
+            <p class="category">Consultar estado de parcelas</p>
+          </md-card-header>
 
-            <h2 class="md-layout">Tracking de parcelas</h2>
+          <md-card-content>
             <hr />
 
             <div class="md-layout">
               <div class="md-layout-item md-size-25">
-                <md-field>
+                <md-field :class="messageClass">
                   <label>Tracking</label>
-                  <md-input></md-input>
+                  <md-input required v-model="tracking" md-invalid="isinvalid"></md-input>
+                  <span class="md-error">Campo obligatorio</span>
                 </md-field>
               </div>
-              <md-button class="md-primary md-simple">Buscar</md-button>
+              <md-button class="md-primary md-simple" v-on:click="buscar">Buscar</md-button>
             </div>
 
             <div class="md-layout">
               <div class="md-layout-item bordered">
                 <md-field>
                   <label>Detalle</label>
-                  <md-textarea></md-textarea>
+                  <md-textarea disabled></md-textarea>
                 </md-field>
               </div>
             </div>
@@ -41,11 +45,16 @@ export default{
     return {
       tracking: '',
       detalle: '',
-      buscando: false
+      buscando: false,
+      isinvalid: false
     }
   },
   methods: {
     buscar () {
+      if (this.tracking === '') {
+        this.isinvalid = true
+        return
+      }
       this.buscando = true
       alert(this.buscando)
     }

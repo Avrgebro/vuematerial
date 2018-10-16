@@ -4,10 +4,11 @@
 
 <script>
 import GoogleMapsLoader from 'google-maps'
+import Aeropuertos from './Data/Aeropuertos'
 export default {
   methods: {
     initMap (google) {
-      var myLatlng = new google.maps.LatLng(40.748817, -73.985428)
+      var myLatlng = new google.maps.LatLng(Aeropuertos.data[0].lat, -73.985428)
       var mapOptions = {
         zoom: 3,
         center: myLatlng,
