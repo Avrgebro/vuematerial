@@ -3,7 +3,7 @@ import Dashboard from '@/pages/Dashboard.vue'
 import UserProfile from '@/pages/UserProfile.vue'
 import Maps from '@/pages/Maps.vue'
 import Login from '@/pages/Login.vue'
-import Notifications from '@/pages/Notifications.vue'
+import Reportes from '@/pages/Reportes.vue'
 import Tracking from '@/pages/Tracking.vue'
 
 const routes = [
@@ -28,9 +28,9 @@ const routes = [
         component: UserProfile
       },
       {
-        path: 'notifications',
-        name: 'Notifications',
-        component: Notifications
+        path: 'reportes',
+        name: 'Reportes',
+        component: Reportes
       },
       {
         path: 'maps',

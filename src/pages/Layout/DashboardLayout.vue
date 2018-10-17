@@ -6,9 +6,9 @@
         <md-icon>dashboard</md-icon>
         <p>Tracking</p>
       </sidebar-link>
-      <sidebar-link to="/user">
-        <md-icon>person</md-icon>
-        <p>Perfil</p>
+      <sidebar-link to="/reportes">
+        <md-icon>library_books</md-icon>
+        <p>Reportes</p>
       </sidebar-link>
       <sidebar-link to="/maps">
         <md-icon>location_on</md-icon>
